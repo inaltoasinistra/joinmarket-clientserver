@@ -352,6 +352,7 @@ class BaseWallet(object):
         """
         Write data to associated storage object and trigger persistent update.
         """
+        self._boltzmann.save()
         self._utxos.save()
 
     @classmethod
